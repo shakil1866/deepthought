@@ -55,27 +55,26 @@
             </div>
             <div class="sidebar-bottom">
                 <ul >
-                   <li style="list-style: circle;"> <strong>Explore the world of management</strong></li>
+                   <li style="list-style: circle;" id="task_title"> </li>
+                   <h2 id="main"></h2>
                 </ul>
                 <ul>    
-                    <li style="list-style: circle;">Technical Project Management</li> 
-                    <li style="list-style: circle;">Threadbuild</li> 
-                    <li style="list-style: circle;">Structure your pointers</li> 
-                    <li style="list-style: circle;">4SA Method</li> 
+                    <li style="list-style: circle;" id="asset_title-h"></li> 
+                    <li style="list-style: circle;" id="asset_title-h1"></li> 
+                    <li style="list-style: circle;" id="asset_title-h2" ></li> 
+                    <li style="list-style: circle;" id="asset_title-h3"></li> 
                 </ul>
             </div>
         </div>
         <!-- box middle -->
         <div class="box-middle">
             <div class="box-middle-text">
-                <h2>Technical Project Management</h2>
+                <h2  id="title"></h2>
                 <button>Submit task</button>
             </div>
             <div class="box-middle-para">
-                <h3>Explore the world of management</h3>
-                <p>As a project manager, you play an important reole in leading a project through initiation, planning,
-                    execution, monitoring, controlling and completion. How? Do you want to manage each and every step of
-                    your life?</p>
+                <h3 style="margin-bottom: 10px;" id="task_title1"></h3>
+                <p id="task_description"></p>
             </div>
 
             <div class="box-middle-box-first">
@@ -83,7 +82,7 @@
                 <div class="box-middle-box-first-1">
                     <div class="box-middle-box-first-1-top">
                         <div class="box-middle-box-first-1-top-content">
-                            <h3>Technical Project Management</h3>
+                            <h3 id="asset_title"></h3>
                             <div class="box-middle-box-first-1-top-content-img">
                                 <img src="./image/Group 1735.png" alt="">
                             </div>
@@ -91,10 +90,9 @@
                     </div>
                     <div class="box-middle-box-first-1-main">
                         <div class="box-middle-box-first-1-para">
-                            <p><strong>Description:</strong> Story of Alignment Scope of Agility Specific Accountable
-                                Staggering Approach</p>
-                            <div class="box-middle-box-first-1-img">
-                                <img src="./image/image 13.png" alt="">
+                            <p><strong>Description:</strong><span id="asset_description"></span></p>
+                            <div class="box-middle-box-first-1-img" id="asset_content" >
+                                <!-- <img class="asset_content" src="" alt=""> -->
                             </div>
                         </div>
                     </div>
@@ -104,7 +102,7 @@
                 <div class="box-middle-box-first-2">
                     <div class="box-middle-box-first-1-top">
                         <div class="box-middle-box-first-1-top-content">
-                            <h3>Technical Project Management</h3>
+                            <h3 id="asset_title1"></h3>
                             <div class="box-middle-box-first-1-top-content-img">
                                 <img src="./image/Group 1735.png" alt="">
                             </div>
@@ -112,8 +110,7 @@
 
                     </div>
                     <div class="box-middle-box-first-1-para">
-                        <p><strong>Description:</strong> Watch the video and threadbuild, and jot out key threads while
-                            watching the video</p>
+                        <p><strong>Description:</strong> <span id="asset_description1"></span> </p>
                     </div>
                     <div class="box-middle-box-first-1-para2">
                         <img style="height: 100%;" src="./image/Vector.png" alt="">
@@ -173,7 +170,7 @@
                     <div class="box-middle-box-first-1">
                         <div class="box-middle-box-first-1-top">
                             <div class="box-middle-box-first-1-top-content">
-                                <h3>Technical Project Management</h3>
+                                <h3 id="asset_title2"></h3>
                                 <div class="box-middle-box-first-1-top-content-img">
                                     <img src="./image/Group 1735.png" alt="">
                                 </div>
@@ -181,8 +178,7 @@
                         </div>
                         <div class="box-middle-box-first-1-main">
                             <div class="box-middle-box-second-1-para">
-                                <p><strong>Description:</strong> Story of Alignment Scope of Agility Specific Accountable
-                                    Staggering Approach</p>
+                                <p><strong>Description:</strong><span id="asset_description2"></span></p>
                                 
                             </div>
                             <div class="box-middle-box-second-1-text">
@@ -222,7 +218,7 @@
                     <div class="box-middle-box-first-2">
                         <div class="box-middle-box-first-1-top">
                             <div class="box-middle-box-first-1-top-content">
-                                <h3>4SA Method</h3>
+                                <h3 id="asset_title3"></h3>
                                 <div class="box-middle-box-first-1-top-content-img">
                                     <img src="./image/Group 1735.png" alt="">
                                 </div>
@@ -230,7 +226,7 @@
     
                         </div>
                         <div class="box-middle-box-second-1-para">
-                            <p><strong>Description:</strong> To Explore more read more </p>
+                            <p><strong>Description:</strong><span id="asset_description3"></span> </p>
                         </div>
                         <div class="box-middle-box-second-1-para2">
                             <img style="height: 100%;" src="./image/Vector.png" alt="">
@@ -248,7 +244,7 @@
                            
                         </div>
                         <div class="box-middle-box-second-1-para22">
-                         <p>How are you going to develop your stratergy ? Which method are you going to use to develop a stratergy ? What if the project is lengthy?</p>
+                         <p id="description"></p>
                             <a>See More</a>
                         </div>
                         <div class="box-middle-box-second-1-para2">
@@ -294,6 +290,10 @@
 
       
 
-</body>
+      
+
+</body> 
+
+ <div id="output"></div>
 <script src="main.js"></script>
 </html>

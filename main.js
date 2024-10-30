@@ -16,3 +16,45 @@ document.getElementById('togglehidden').addEventListener('click', function() {
     sidebar.classList.remove('open'); // Remove the 'open' class
     sidebar.style.display = 'none'; // Hide the sidebar
 });
+
+
+
+fetch('data.json')
+.then(response => {
+    // Check if the response is ok (status code 200-299)
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    return response.json();  // Parse the JSON data
+})
+.then(data => {
+    // Use the fetched data
+    console.log(data);  // Log the entire data object
+
+
+
+
+    document.getElementById('title').innerHTML = `<h2>${data.title}</h2> `;   
+    document.getElementById('task_title').innerHTML = `<h3>${data.tasks[0].task_title}</h3> `; 
+    document.getElementById('task_title1').innerHTML = `<h3>${data.tasks[0].task_title}</h3> `; 
+    document.getElementById('task_description').innerHTML = `<p>${data.tasks[0].task_description}</p> `; 
+    document.getElementById('asset_title').innerHTML = `<h3>${data.tasks[0].assets[0].asset_title}</h3> `; 
+    document.getElementById('asset_title-h').innerHTML = `<li>${data.tasks[0].assets[0].asset_title}</li> `; 
+    document.getElementById('asset_title-h1').innerHTML = `<li>${data.tasks[0].assets[1].asset_title}</li> `; 
+    document.getElementById('asset_title-h2').innerHTML = `<li>${data.tasks[0].assets[2].asset_title}</li> `; 
+    document.getElementById('asset_title-h3').innerHTML = `<li>${data.tasks[0].assets[3].asset_title}</li> `; 
+    document.getElementById('asset_description').innerHTML = `<span>${data.tasks[0].assets[0].asset_description}</span> `;
+    document.getElementById('asset_content').innerHTML = `<img src="${data.tasks[0].assets[0].asset_content}" alt="Asset Image" />`;
+    document.getElementById('asset_title1').innerHTML = `<h3>${data.tasks[0].assets[1].asset_title}</h3> `; 
+    document.getElementById('asset_description1').innerHTML = `<span>${data.tasks[0].assets[1].asset_description}</span> `;
+    document.getElementById('asset_title2').innerHTML = `<h3>${data.tasks[0].assets[2].asset_title}</h3> `; 
+    document.getElementById('asset_description2').innerHTML = `<span>${data.tasks[0].assets[2].asset_description}</span> `;
+    document.getElementById('asset_title3').innerHTML = `<h3>${data.tasks[0].assets[3].asset_title}</h3> `; 
+    document.getElementById('asset_description3').innerHTML = `<span>${data.tasks[0].assets[3].asset_description}</span> `;
+    document.getElementById('description').innerHTML = `<p>${data.description.trim().substring(0, 140)}</p>`; 
+
+})
+.catch(error => {
+    // Handle errors
+    console.error('There was a problem with the fetch operation:', error);
+});
