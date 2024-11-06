@@ -94,13 +94,13 @@ nav {
     width: 350px;
     position: fixed;
     left: -250px; /* Hidden by default */
-    transition: left 0.3s ease; /* Smooth transition */
-    display: none; /* Initially hidden */
+    transition: left 0.3s ease;
+    display: none; 
 }
 
 .sidebar.open {
-    left: 0; /* Show sidebar */
-    display: block; /* Ensure it is displayed when open */
+    left: 0; 
+    display: block;
 }
 .sidebar-top {
     background: #000000;

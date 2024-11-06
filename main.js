@@ -10,26 +10,24 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     }
 });
 
-// Event listener to hide the sidebar
+//  hide the sidebar
 document.getElementById('togglehidden').addEventListener('click', function() {
     const sidebar = document.getElementById('sidebar');
-    sidebar.classList.remove('open'); // Remove the 'open' class
-    sidebar.style.display = 'none'; // Hide the sidebar
+    sidebar.classList.remove('open'); 
+    sidebar.style.display = 'none';
 });
 
 
 
 fetch('data.json')
 .then(response => {
-    // Check if the response is ok (status code 200-299)
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
-    return response.json();  // Parse the JSON data
+    return response.json();  
 })
 .then(data => {
-    // Use the fetched data
-    console.log(data);  // Log the entire data object
+    console.log(data);  
 
 
 
@@ -55,6 +53,5 @@ fetch('data.json')
 
 })
 .catch(error => {
-    // Handle errors
     console.error('There was a problem with the fetch operation:', error);
 });
